@@ -1,0 +1,17 @@
+---
+
+- name: demo play
+  hosts: all
+  become: true
+  tasks:
+    - name: create a file
+      file:
+        path: "demo.txt"
+        state: touch
+        owner: "ubuntu"
+        group: "ubuntu"
+    - name: add content
+      lineinfile:
+        path: "demo.txt"
+        line: "This is created using Ansible!"
+        state: present

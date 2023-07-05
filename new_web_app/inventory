@@ -1,0 +1,1 @@
+db_and_web_server ansible_host=65.0.107.57 ansible_connection=ssh ansible_user=ubuntu

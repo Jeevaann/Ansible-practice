@@ -1,0 +1,10 @@
+---
+
+- name: create a file and add content to the file
+  hosts: all
+  become: true
+  tasks:
+    - name: using copy module
+      copy:
+        dest: data.txt
+        content: "This is created using copy module"

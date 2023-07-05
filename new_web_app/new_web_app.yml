@@ -1,0 +1,9 @@
+---
+
+- name: creating web app using roles
+  hosts: all
+  become: yes
+  roles:
+    - python
+    - mysql_db
+    - flask_web
